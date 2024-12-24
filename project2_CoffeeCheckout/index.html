@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Masters</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Coffee Masters</h1>
+        <img class="logo" src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
+            alt="brand logo">
+    </header>
+    <section class="customer">
+        <article class="cart">
+            <h2>ITEMS</h2>
+            <div class="cart-item">
+                <p>1x</p>
+                <div class="item-detail">
+                    <p class="item-name">Cappucino</p>
+                    <p>Lite Foam</p>
+                </div>
+                <p class="item-price">$3.35</p>
+            </div>
+            <hr />
+            <div class="cart-item">
+                <p>1x</p>
+                <div class="item-detail">
+                    <p class="item-name">Cappucino</p>
+                    <p>Lite milk</p>
+                    <p>Double Espresso</p>
+                </div>
+                <p class="item-price">$3.85</p>
+            </div>
+            <hr />
+            <div class="cart-item">
+                <p>1x</p>
+                <div class="item-detail">
+                    <p class="item-name">Croissant</p>
+                    <p>Butter</p>
+                </div>
+                <p class="item-price">$2.45</p>
+            </div>
+        </article>
+        <article class="customer-details">
+            <article class="customer-name">
+                <h2>NAME</h2>
+                <label for="custName">Name for order</label>
+                <input type="text" id="custName" placeholder="Ford Prefect">
+            </article>
+            <article class="customer-payment">
+                <h2>PAYMENT</h2>
+                <label class="card-label" for="custCard">Card Number</label>
+                <input type="text" id="custCard" pattern="\d{16}" placeholder="1234 4567 7891 2468">
+                <label class="cvv-label" for="custCVV">CVV Number</label>
+                <input type="text" id="custCVV" pattern="\d{3}" placeholder="345">
+            </article>
+        </article>
+        <article class="bill">
+            <div class="inline">
+                <p>Subtotal:</p>
+                <p>$9.65</p>
+            </div>
+            <div class="inline">
+                <p>Tax:</p>
+                <p>$0.82</p>
+            </div>
+            <div class="inline total strong">
+                <p>Total:</p>
+                <p>$10.47</p>
+            </div>
+        </article>
+        <button class="btn">Place order</button>
+    </section>
+</body>
+
+</html>

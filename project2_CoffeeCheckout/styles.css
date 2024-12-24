@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.header {
+    background-color: #43281c;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    color: #e5daad;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
+    color: #9b724c;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    color: #707361;
+}
+
+.item-name, .item-price, .strong {
+    font-family: 'Open Sans',  sans-serif;
+    font-weight: 600;
+    color: #525945;
+}
+
+.logo {
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 16px;
+    left: 41%;
+}
+
+.cart {
+    height: 70%;
+    grid-area: cart;  
+    background-color: #eee1d5;
+    margin: 38px;
+    border-radius: 5px;
+    box-shadow: #6d6b6b 2px 2px 5px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;   
+}
+
+.customer-details {
+    grid-area: payment;
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    border-radius: 5px;
+}
+
+.bill {
+    grid-area: bill;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0px 30%;
+}
+
+.btn {
+    grid-area: btn;
+    background-color: #9e7b5a;
+    color: #323232;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: none;
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px 20%;
+}
+
+button:hover {
+    background-color: #b5a18e;
+}
+
+.customer {
+    display: grid;
+    row-gap: 20px;
+    grid-template-areas: "cart payment" "bill bill" "btn btn";
+}
+
+.cart-item {
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+.item-detail {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    padding-left: 20px;
+}
+
+.item-detail > p:not(:nth-child(1)) {
+    color: #9b724c;
+}
+
+hr {
+    color : #9b724c;
+}
+
+.customer-name, .customer-payment {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #eee1d5;
+    margin: 0 20px 20px;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: #6d6b6b 2px 2px 5px;
+}
+
+label {
+    position: absolute;
+    font-family: 'Open Sans', sans-serif;
+    color:#9b724c;
+    top: 81px;
+    left: 65px;
+    background-color: #eee1d5;
+    font-size: 0.8em;
+    padding: 0 5px;
+}
+
+.card-label {
+    top: 81px;
+    left: 65px;
+}
+
+.cvv-label {
+    top: 160px;
+    left: 65px;
+}
+
+input {
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 20px;
+    padding: 12px 21px;
+    width: 50%;
+    margin: 5px 0px;
+    border: #9b724c solid 2px;
+    background-color: #eee1d5;
+}
+
+input#custCVV {
+    margin-top: 30px;
+    width: 25%;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    margin-top: 15px;
+}
