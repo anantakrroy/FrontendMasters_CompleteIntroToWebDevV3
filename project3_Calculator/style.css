@@ -15,9 +15,17 @@
     height: 45px;
 }
 
+p {
+    background-color: #babbbb;
+}
+
 p:last-child {
     background-color: #df974c;
     color: white
+}
+
+p:hover {
+    opacity: 0.7;
 }
 
 .val {
