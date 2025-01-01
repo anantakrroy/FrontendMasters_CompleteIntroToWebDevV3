@@ -55,7 +55,7 @@ p:last-child {
 }
 
 p.double {
-    width: 77%;
+    width: 80%;
 }
 
 .second > p, .third > p, .fourth > p, .fifth > p  {
@@ -68,5 +68,5 @@ p.double {
 }
 
 p.triple {
-    width: 122%;
+    width: 127%;
 }
