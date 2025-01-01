@@ -15,16 +15,16 @@
     height: 45px;
 }
 
-p {
+button {
     background-color: #babbbb;
 }
 
-p:last-child {
+button:last-child {
     background-color: #df974c;
     color: white
 }
 
-p:hover {
+button:hover {
     opacity: 0.7;
 }
 
@@ -53,7 +53,7 @@ p:hover {
     display: inline-block;
 }
 
-.first > p {
+.first > button {
     width: 33%;
     text-align: center;
     border-right: solid gray 2px;
@@ -62,11 +62,11 @@ p:hover {
     padding: 10px;
 }
 
-p.double {
-    width: 80%;
+button.double {
+    width: 70%;
 }
 
-.second > p, .third > p, .fourth > p, .fifth > p  {
+.second > button, .third > button, .fourth > button, .fifth > button  {
     text-align: center;
     border-right: solid gray 2px;
     border-bottom: solid gray 2px;
@@ -75,6 +75,6 @@ p.double {
     width: 33%;
 }
 
-p.triple {
-    width: 127%;
+button.triple {
+    width: 108%;
 }

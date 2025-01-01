@@ -1,12 +1,12 @@
-const p = document.querySelectorAll("p");
+const buttons = document.querySelectorAll("button");
 const input = document.querySelector(".val");
 
 let display = "";
 let operands = [];
 let operator = "";
 
-for (let i = 0; i < p.length; i++) {
-  p[i].addEventListener("click", clickEventListener);
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", clickEventListener);
 }
 
 function clickEventListener(event) {
