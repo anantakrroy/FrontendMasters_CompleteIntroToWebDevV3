@@ -53,9 +53,9 @@ function clickEventListener(event) {
     } else {
       operands.push(Number(display));
       input.value = calculateResult();
-      // after result is calculated 
+      // EXTREMELY IMPORTANT : set the display to the result so that any subsequent operator click takes this result as one of the operand for the subsequent operations
+      display = input.value;
     }
-
   }
 }
 
@@ -65,24 +65,26 @@ function calculateResult() {
   // SUM
   if (operator == "+") {
     // console.log(operands.reduce((a, c) => a + c));
-    operands = [operands.reduce((a, c) => a + c)];
-    console.log(`Operands after SUM >> ${operands}`);
-
-    return operands[0];
+    let result = operands.reduce((a, c) => a + c);
+    operands = [];
+    return result;
   }
   // DIFF
   if (operator == "−") {
-    operands = [operands.reduce((a, c) => a - c)];
-    return operands[0];
+    let result = operands.reduce((a, c) => a - c);
+    operands = [];
+    return result;
   }
   // MULTIPLY
   if (operator == "×") {
-    operands = [operands.reduce((a, c) => a * c)];
-    return operands[0];
+    let result = operands.reduce((a, c) => a * c);
+    operands = [];
+    return result;
   }
   // DIVISION
   if (operator == "÷") {
-    operands = [operands.reduce((a, c) => a / c)];
-    return operands[0];
+    let result = operands.reduce((a, c) => a / c);
+    operands = [];
+    return result;
   }
 }
