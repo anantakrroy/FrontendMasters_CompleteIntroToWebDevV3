@@ -17,6 +17,7 @@
 
 button {
     background-color: #babbbb;
+    font-size: 1.3em;
 }
 
 button:last-child {
