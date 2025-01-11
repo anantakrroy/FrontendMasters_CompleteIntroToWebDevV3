@@ -13,6 +13,14 @@
     animation-iteration-count: infinite;
 }
 
+.greeting {
+    background-color: rgb(255, 80, 80);
+    color: rgb(130, 22, 22);
+    padding: 15px;
+    font-style: 'Open Sans', serif;
+    font-size: 1.2rem;
+}
+
 h1 {
     font-style: 'Open sans', serif;
     text-align: center;
