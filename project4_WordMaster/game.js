@@ -18,13 +18,10 @@ async function getWordOfDay() {
 // Start animation
 function startAnimation() {
   document.querySelector(".spinner").classList.remove("hidden");
-  document.querySelector(".spinner").classList.add("spinnerAnimate");
-  // document.querySelector(".spinner").classList.add("show");
 }
 
 // End animation
 function endAnimation() {
-  document.querySelector(".spinner").classList.remove("spinnerAnimate");
   document.querySelector(".spinner").classList.add("hidden");
 }
 
