@@ -7,25 +7,34 @@ let userInputWord = "";
 
 // GET word from API
 async function getWordOfDay() {
+  startAnimation();
   const response = await fetch(dayWordUrl);
   const json = await response.json();
   console.log("word of the day is >>> ", json.word);
   wordOfTheDay = json.word;
+  endAnimation();
 }
 
-// Handle spinner animation
-async function spinTillNoWord() {
-  document.querySelector(".spinner").setAttribute("class", "spinnerAnimate");
-  await getWordOfDay();
-  document.querySelector(".spinnerAnimate").setAttribute("class", "hidden");
+// Start animation
+function startAnimation() {
+  document.querySelector(".spinner").classList.remove("hidden");
+  document.querySelector(".spinner").classList.add("spinnerAnimate");
+  // document.querySelector(".spinner").classList.add("show");
 }
 
-// Call spinner method
-spinTillNoWord();
+// End animation
+function endAnimation() {
+  document.querySelector(".spinner").classList.remove("spinnerAnimate");
+  document.querySelector(".spinner").classList.add("hidden");
+}
+
+// Call getWordOfDay method
+getWordOfDay();
 
 // POST request to API to validate word
 async function validateWord(word) {
   console.log("Word sent by user ??? ", word);
+  startAnimation();
 
   const options = {
     method: "POST",
@@ -38,7 +47,9 @@ async function validateWord(word) {
   const response = await request.json();
 
   // console.log("POST response >>>>> ", response);
+  endAnimation();
   return response;
+
 }
 
 // Handle attempts
