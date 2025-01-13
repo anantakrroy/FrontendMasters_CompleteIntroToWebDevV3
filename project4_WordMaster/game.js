@@ -11,7 +11,7 @@ async function getWordOfDay() {
   startAnimation();
   const response = await fetch(dayWordUrl);
   const json = await response.json();
-  console.log("word of the day is >>> ", json.word);
+  // console.log("word of the day is >>> ", json.word);
   wordOfTheDay = json.word;
   endAnimation();
 }
@@ -31,7 +31,7 @@ getWordOfDay();
 
 // POST request to API to validate word
 async function validateWord(word) {
-  console.log("Word sent by user ??? ", word);
+  // console.log("Word sent by user ??? ", word);
   startAnimation();
 
   const options = {
@@ -64,8 +64,8 @@ async function handleRow(e) {
   e.stopPropagation();
   e.preventDefault();
 
-  console.log(e.currentTarget);
-  console.log(`Pressed >> ${e.key} with code >> ${e.key.charCodeAt(0)}`);
+  // console.log(e.currentTarget);
+  // console.log(`Pressed >> ${e.key} with code >> ${e.key.charCodeAt(0)}`);
 
   // Construct array of children of event.target
   const parent = e.currentTarget;
@@ -129,7 +129,7 @@ async function handleRow(e) {
     // finally shift focus to 2nd attempt i.e 2nd row
     
     const isValidWord = await validateWord(userInputWord);
-    console.log("Response from server >>> ", isValidWord);
+    // console.log("Response from server >>> ", isValidWord);
     
     if (!isValidWord.validWord) {
       invalidWord(children);
