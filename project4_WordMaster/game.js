@@ -1,6 +1,6 @@
 const rows = document.querySelectorAll(".row");
 const numAttempts = document.querySelector(".puzzle").childElementCount;
-const dayWordUrl = "https://words.dev-apis.com/word-of-the-day?puzzle=361";
+const dayWordUrl = "https://words.dev-apis.com/word-of-the-day";
 let wordOfTheDay = "";
 let userInputWord = "";
 let currentAttempt = 0;
@@ -202,13 +202,18 @@ function handleNextAttempt(num) {
 
 function showGreetingMessage(result) {
   const element = document.querySelector(".greeting");
+  const span = document.createElement('span');
   if (!result) {
     element.classList.add("red");
     element.innerText = `You lose ! Correct word : ${wordOfTheDay}`;
+    span.innerHTML = '<a href=/project4_WordMaster> Play again ?</a>'
+    element.append(span)
   } else {
     document.querySelectorAll('input').forEach(el => el.setAttribute('disabled','disabled'));
     element.classList.add("green");
     element.innerText = `You guessed it right ! Correct word : ${wordOfTheDay}`;
+    span.innerHTML = '<a href="/project4_WordMaster"> Play again ?</a>'
+    element.append(span)
   }
   element.classList.remove("hidden");
 }

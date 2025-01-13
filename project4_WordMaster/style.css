@@ -19,11 +19,18 @@
     padding: 15px;
     font-style: 'Open Sans', serif;
     font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 h1 {
     font-style: 'Open sans', serif;
     text-align: center;
+}
+
+a {
+    font-size: 1.4rem;
+    color: white;
+    font-weight: 700;
 }
 
 .row {
